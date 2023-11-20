@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cadastro.css">
+    <title>Document</title>
+    
+</head>
+<body>
+  
+    <div class="bg-image"></div>
+    
+<div class="bg-text">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.min.js">
+    
+    <title>Cadastro</title>
+    
+</head>
+<body> 
+    <div class="center">
+    <header >
+        <img class="logo" src="IMG-20231009-WA0025-removebg-preview.png" alt="logo" width="200" height="200">
+        <h1 class="titulo">Inscreva-se grátis e venha curtir</h1>
+    </header>
+
+    <article>   
+        <div class="conta">
+            <p class="pergunta"> E-mail </p> 
+            <input  class="email caixa_de_texto" type="text" placeholder="Insira seu E-mail.">
+
+            
+            <p class="pergunta">Criar uma senha </p>
+            <input required type="password" name="senha" id="senha" placeholder="Senha">
+
+           <p class="pergunta"> Confirmar a Senha </p>
+           <input required type="password" name="senhaC" id="senhaC" placeholder="Confirmar Senha">
+
+            <script>
+            let senha = document.getElementById('senha');
+                let senhaC = document.getElementById('senhaC');
+                
+                function validarSenha() {
+                  if (senha.value != senhaC.value) {
+                    senhaC.setCustomValidity("Senhas diferentes!");
+                    senhaC.reportValidity();
+                    return false;
+                  } else {
+                    senhaC.setCustomValidity("");
+                    return true;
+                  }
+                }
+                
+                // verificar também quando o campo for modificado, para que a mensagem suma quando as senhas forem iguais
+                senhaC.addEventListener('input', validarSenha);</script>
+
+            <p class="pergunta">Endereço</p>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <form method="get" action=".">
+                
+              </form>
+            <center><label><input name="Rua" type="text" id="Rua"  placeholder="Rua" size="35"></label><br /></center>
+            <center><input class="name caixa_de_texto" type="text" placeholder="Número"></center>
+            <center><input class="name caixa_de_texto" type="text" placeholder="Complemento "></center>
+            <center><label><input name="bairro" type="text" id="bairro" placeholder="Bairro"></label><br /></center>
+            <center><label><input name="cidade" type="text" id="cidade"  placeholder="cidade"></label><br /></center>
+            <center><label><input name="uf" type="text" id="uf" placeholder="Unidade Federal"></label><br /></center>
+            <center><input class="name caixa_de_texto" type="text" placeholder="CEP"  onblur="pesquisacep(this.value);" /></label><br /></center>
+            <script src="endereço.js"></script>
+            
+            
+            
+            
+
+            <section>
+            <p class="pergunta">Qual a sua data de nascimento</p>
+        <div class="nascimento">
+
+            <div class="dia">
+                <P>Dia</P>
+                <input class="dia" type="text" placeholder="Dia">
+            </div>
+           
+            <div class="mes">
+                <p>Mês</p>
+                <select>
+                    <option>Escolha o mês</option>
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+            </div>
+            <div class="ano">    
+                <p>Ano</p>
+                <input type="text" placeholder="AAAA">
+            </div>
+
+             <div class="Idade">    
+                <p>Idade</p>
+                <input type="text" placeholder="Idade">
+            </div>
+    </div>
+    <input id="btn_enviar" type="button" value="enviar" onclick="validar()">
+    </section>
+        </article>  
+       
+    </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="bootbox.all.min.js"></script>
+    <script src="./cadastro.js"></script>
+    <script>
+        a = 5;
+        b = 6;
+        c = a + b;
+        console.log(c);
+        console.info();
+        </script>
+        <head>
+            <title>ViaCEP Webservice</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+            <!-- Adicionando Javascript -->
+            </head>
+        
+            
+</body>
+  
+</div>
+</body>
+</html>
